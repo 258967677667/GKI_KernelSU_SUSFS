@@ -27,7 +27,7 @@ By flashing this kernel, **YOU** are choosing to make these modifications. If so
 
 [Kernel Patches](https://github.com/WildPlusKernel/kernel_patches)  
 [Old Build Scripts](https://github.com/TheWildJames/kernel_build_scripts)  
-[Kernel FLasher](https://github.com/capntrips/KernelFlasher/releases)  
+[Kernel Flasher](https://github.com/capntrips/KernelFlasher/releases)  
 
 ---
 
@@ -37,7 +37,8 @@ Follow the steps for GKI:
 [Installation](https://kernelsu.org/guide/installation.html)
 
 To get boot.img format:  
-[Get MyKernel Format](https://github.com/TheWildJames/Get_My_Kernel_Format)
+[Telegram Bot](https://t.me/wildpluskernel/22076)  
+[Get My Kernel Format](https://github.com/TheWildJames/Get_My_Kernel_Format)
 
 ---
 
@@ -52,6 +53,7 @@ To get boot.img format:
 
 - **KernelSU**: Developed by [tiann](https://github.com/tiann).
 - **KernelSU-Next**: Developed by [rifsxd](https://github.com/rifsxd/KernelSU-Next).
+- **Magic-KSU**: Developed by [5ec1cff](https://github.com/5ec1cff/KernelSU).  
 - **SUSFS**: Developed by [simonpunk](https://gitlab.com/simonpunk/susfs4ksu.git).
 - **SUSFS Module**: Developed by [sidex15](https://github.com/sidex15).
 - **Sultan Kernels**: Developed by [kerneltoast](https://github.com/kerneltoast).
@@ -84,7 +86,6 @@ Flashing this kernel will void your warranty, and there is always a risk of bric
 
 [Telegram](https://t.me/TheWildJames) NO DMS PLEASE! Ask in chat below!  
 [Telegram Group](https://t.me/wildpluskernel)  
-[Build Scripts](https://github.com/TheWildJames/kernel_build_scripts)
 
 # Special thanks to the following people for their contributions!
 This helps me alot! <3
@@ -93,6 +94,6 @@ This helps me alot! <3
 [sidex15](https://github.com/sidex15) - Created module!  
 [backslashxx](https://github.com/backslashxx) - Helped with patches!  
 [Teemo](https://github.com/liqideqq) - Helped with patches!  
-[幕落](https://github.com/MuLuo688) - Donation!  
+[幕落](https://github.com/MuLuo688) - Donation!
 
 If you have contributed and are not here please remind me!

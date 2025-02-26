@@ -128,12 +128,12 @@ jobs:
       REPO_OWNER: WildPlusKernel
       REPO_NAME: GKI_KernelSU_SUSFS
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      RELEASE_NAME: "*TEST BUILD* GKI Kernels With KernelSU ${{ inputs.kernelsu_variant }} & SUSFS v1.5.5 *TEST BUILD*"
+      RELEASE_NAME: "*TEST BUILD* GKI Kernels With KernelSU-${{ inputs.kernelsu_variant }} ${{ inputs.kernelsu_branch }} & SUSFS v1.5.5 *TEST BUILD*"
       RELEASE_NOTES: |
-        This release contains KernelSU ${{ inputs.kernelsu_variant }} and SUSFS v1.5.5
+        This release contains KernelSU-${{ inputs.kernelsu_variant }} ${{ inputs.kernelsu_branch }} and SUSFS v1.5.5
         
         Features:
-        -> KernelSU-${{ inputs.kernelsu_variant }}
+        -> KernelSU-${{ inputs.kernelsu_variant }}-${{ inputs.kernelsu_branch }}
         -> SUSFS ඞ v1.5.5 
         -> Wireguard Support
         -> Simple Maphide for LineageOS Detections
@@ -149,7 +149,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Determine the branch for KernelSU-${{ inputs.kernelsu_variant }}
-        if: ${{ inputs.kernelsu_branch == 'Dev' }}
+        if: ${{ inputs.kernelsu_branch == 'Dev' || inputs.kernelsu_variant == 'MKSU' }}
         run: |
           # Determine the branch based on user input
           if [[ "${{ inputs.kernelsu_variant }}" == "Official" || "${{ inputs.kernelsu_variant }}" == "MKSU" ]]; then
@@ -174,8 +174,8 @@ jobs:
             REPO_URL2="tiann/KernelSU"
           elif [ "${{ inputs.kernelsu_variant }}" == "Next" ]; then
             echo "This is the Next variant"
-            REPO_URL="https://github.com/rifsxd/KernelSU-Next.git"
-            REPO_URL2="rifsxd/KernelSU-Next"
+            REPO_URL="https://github.com/KernelSU-Next/KernelSU-Next.git"
+            REPO_URL2="KernelSU-Next/KernelSU-Next"
           elif [ "${{ inputs.kernelsu_variant }}" == "MKSU" ]; then
             echo "This is the MKSU variant"
             REPO_URL="https://github.com/5ec1cff/KernelSU.git"
@@ -264,7 +264,7 @@ jobs:
             echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
             echo "$RELEASE_NOTES" >> $GITHUB_ENV
             echo "Next Manager:" >> $GITHUB_ENV
-            echo "-> https://github.com/rifsxd/KernelSU-Next" >> $GITHUB_ENV
+            echo "-> https://github.com/KernelSU-Next/KernelSU-Next" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
           elif [ "${{ inputs.kernelsu_variant }}" == "MKSU" ]; then
             echo "This is the MKSU variant"
